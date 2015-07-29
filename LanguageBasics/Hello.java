@@ -42,20 +42,20 @@ public class Hello {
 			System.out.println(nazov.substring(l, nazov.length() - l));
 		}
 
-		Person p = new Person("Janko Hraöko", 18);
+		Person p = new Person("Janko Hra≈°ko", 18);
 		System.out.println(p);
-		
-		Triangle triangle = new Triangle(5);
+
+		Triangle triangle = new Triangle(10,false, 2, 1, '/');
 		System.out.println(triangle);
-		
-		Line line= new Line(10,false);
+
+		Line line = new Line(10, true, 3, 2, '+');
 		System.out.println(line);
-		
-		Square square=new Square(5);
+
+		Square square = new Square(8,false,4,3,'*');
 		System.out.println(square);
-		
-		Rectangle rectangle=new Rectangle(10,7);
+
+		Rectangle rectangle = new Rectangle(4, 30,true, 5, 4, 'r');
 		System.out.println(rectangle);
-		
 	}
+	
 }
