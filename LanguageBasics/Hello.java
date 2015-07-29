@@ -44,5 +44,18 @@ public class Hello {
 
 		Person p = new Person("Janko Hraško", 18);
 		System.out.println(p);
+		
+		Triangle triangle = new Triangle(5);
+		System.out.println(triangle);
+		
+		Line line= new Line(10,false);
+		System.out.println(line);
+		
+		Square square=new Square(5);
+		System.out.println(square);
+		
+		Rectangle rectangle=new Rectangle(10,7);
+		System.out.println(rectangle);
+		
 	}
 }
