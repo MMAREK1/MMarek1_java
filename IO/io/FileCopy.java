@@ -1,5 +1,6 @@
 package io;
 
+import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -13,9 +14,9 @@ public class FileCopy {
             System.err.println("Usage java " + FileCopy.class.getCanonicalName() + " <source> <dest>");
             System.exit(-1);
         }
-        
-        InputStream is = new FileInputStream(args[0]);
-        OutputStream os = new FileOutputStream(args[1]);
+        long time=System.currentTimeMillis();
+        InputStream is = new BufferedInputStream(new FileInputStream(args[0]));
+        OutputStream os =new BufferedOutputStream(new FileOutputStream(args[1]));
         
         int b;
         while((b = is.read()) != -1) {
@@ -24,5 +25,6 @@ public class FileCopy {
          
         is.close();
         os.close();
+        System.out.println((System.currentTimeMillis()-time)/1000);
     }
 }

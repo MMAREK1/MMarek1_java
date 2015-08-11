@@ -1,4 +1,3 @@
-
 public abstract class Shape {
 	protected int x, y;
 	protected char fill;
@@ -52,6 +51,12 @@ public abstract class Shape {
 			answer += " ";
 		return answer;
 	}
+	
+	public void move(int x,int y){
+		setX(x);
+		setY(y);
+	}
+	
 	public String right2(int x){
 		String answer = "";
 		Line line = new Line(x, true, 0, 0, ' ');

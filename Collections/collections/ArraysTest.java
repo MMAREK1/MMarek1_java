@@ -16,6 +16,6 @@ public class ArraysTest {
         
         List<String> sl = Arrays.asList(sa);
         
-        System.out.println(sl);
+        System.out.println(sl.getClass());
     }
 }
